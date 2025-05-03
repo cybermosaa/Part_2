@@ -55,11 +55,11 @@ nav{
     font-size: 30px;
      text-align: center;
 }
-/* .my-heading p{
+.my-heading p{
     color: rgb(255, 92, 33);
     font-size: 25px; 
-    text-align: center;
-} */
+   text-align: center;
+}
 button:active {
     transform: scale(0.95);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
