@@ -93,3 +93,9 @@ margin-top: 0;
     font-size: 14px;
     line-height: 1.5;
 }
+
+.care-grid h1{
+    font-size: 40px; 
+    text-align: center;
+    margin: 0 auto;
+}
