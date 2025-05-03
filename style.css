@@ -58,14 +58,24 @@ button:active {
   .my-button{
     background-color: rgb(193, 242, 170);
     text-size-adjust: 7px; 
-    width: 95px; height: 40px; 
+    width: 95px;
+     height: 40px; 
     border: none;
-     border-radius: 12px;
+    border-radius: 12px;
+    margin-top: 30px;
+    cursor: pointer;
   }
   .my-button:hover {
-    background-color: #6ec66e; /* a darker green on hover */
+    background-color: #6ec66e; /* a darker on hover */
   }
   
+.home-image{
+    height: 650px;
+    width: 100%;
+    max-width: 1432px;
+    display: block;
+    margin: 30px auto 0 auto; /* spacing between button and image */
+}
 .second-heading{
     font-size: 30px; 
     text-align: center;
