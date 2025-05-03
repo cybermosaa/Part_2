@@ -55,6 +55,17 @@ button:active {
     transform: scale(0.95);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+  .my-button{
+    background-color: rgb(193, 242, 170);
+    text-size-adjust: 7px; 
+    width: 95px; height: 40px; 
+    border: none;
+     border-radius: 12px;
+  }
+  .my-button:hover {
+    background-color: #6ec66e; /* a darker green on hover */
+  }
+  
 .second-heading{
     font-size: 30px; 
     text-align: center;
