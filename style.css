@@ -51,6 +51,15 @@ nav{
      color: rgb(32, 31, 31); 
      text-size-adjust: 6px;
 }
+.my-heading h2{
+    font-size: 30px;
+     text-align: center;
+}
+/* .my-heading p{
+    color: rgb(255, 92, 33);
+    font-size: 25px; 
+    text-align: center;
+} */
 button:active {
     transform: scale(0.95);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -74,7 +83,7 @@ button:active {
     width: 100%;
     max-width: 1432px;
     display: block;
-    margin: 30px auto 0 auto; /* spacing between button and image */
+    margin: 15px auto 0 auto; /* spacing between button and image */
 }
 .second-heading{
     font-size: 30px; 
