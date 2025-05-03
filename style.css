@@ -74,19 +74,22 @@ a {
     margin-top: 10px;
 }
 .care-grid div {
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #dbd3bf;
+    padding: 15px;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px
+    box-shadow: 0 2px 6px
     rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    /* transition: transform 0.3s; */
 
 }
 /* text styling */
 .care-grid h2{
- margin-bottom: 10px;
+margin-top: 0;
  font-size: 19px;
+ color: #333;
 }
 .care-grid p{
     font-size: 14px;
+    line-height: 1.5;
 }
