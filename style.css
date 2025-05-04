@@ -183,3 +183,6 @@ margin-top: 0;
         width: 90%; /* smaller screens */
       }
     }
+#backToTop:hover {
+        background-color: #ce7e63;
+}
