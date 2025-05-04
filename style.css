@@ -147,3 +147,22 @@ margin-top: 0;
 .my-aboutus p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.my-looksheading h3 {
+ font-size: 20px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+.my-looksheading h5{
+    font-size: 15px;
+    font-style: normal;
+}
+.my-looks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)  
+}
+.my-looks img{
+    width: 200px ;
+    height: auto;
+    border-radius: 10px;   
+}
