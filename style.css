@@ -166,3 +166,20 @@ margin-top: 0;
     height: auto;
     border-radius: 10px;   
 }
+.my-looks img:hover {
+    transform: scale(1.05);
+  }
+  @media screen and (max-width: 768px) {
+    .my-looks {
+      grid-template-columns: repeat(2, 1fr); /* tablet screens w two columns */
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .my-looks {
+      grid-template-columns: 1fr; /* mobile screens 1 column */
+    }
+
+    .my-looks img {
+        width: 90%; /* smaller screens */
+      }
+    }
