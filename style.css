@@ -42,7 +42,7 @@ figcaption {
     border-radius: 5px;
 }
 nav{
-    background-color: rgb(61, 237, 137); 
+    background-color: #acee26;
     text-align: center;
     font-size: 15px;
 }
@@ -54,15 +54,20 @@ nav{
 .my-heading h2{
     font-size: 30px;
      text-align: center;
+    font-family: sans-serif;
 }
 .my-heading p{
-    color: rgb(255, 92, 33);
-    font-size: 25px; 
+    color: #0fb317d4;
+    font-size:20px;
+    font-weight: 520;
+    font-style: italic;
+    margin-bottom: 7px;
    text-align: center;
 }
 .my-heading h3{
-    color: rgb(36, 193, 38); 
+    color: #4B3832;
     font-size: 25px;
+    font-weight: 700;
     text-align: center;
 }
 .btn-styl{
@@ -157,32 +162,57 @@ margin-top: 0;
     font-size: 15px;
     font-style: normal;
 }
-.my-looks{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)  
-}
-.my-looks img{
-    width: 200px ;
+.my-looks {
+    columns: 3;              /* 3 columns on large screens */
+    column-gap: 20px;
+    padding: 20px;
+  }
+  
+  .my-looks-items {
+    background-color:  #fff;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .my-looks-items img {
+    width: 200px;        /* change to column width*/
     height: auto;
-    border-radius: 10px;   
-}
-.my-looks img:hover {
-    transform: scale(1.05);
+    border-radius: 10px;
   }
-  @media screen and (max-width: 768px) {
+  
+  .captions {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /*  Mobile Screen*/
+  @media (max-width: 600px) {
     .my-looks {
-      grid-template-columns: repeat(2, 1fr); /* tablet screens w two columns */
+      columns: 1;
     }
   }
-  @media screen and (max-width: 480px) {
+  
+  /*Tablet screen*/
+  @media (max-width: 900px) {
     .my-looks {
-      grid-template-columns: 1fr; /* mobile screens 1 column */
+      columns: 2;
     }
-
-    .my-looks img {
-        width: 90%; /* smaller screens */
-      }
-    }
+  }
 #backToTop:hover {
         background-color: #e3bf4a;
 }
+/* .captions {
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #757575;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+} */
+
