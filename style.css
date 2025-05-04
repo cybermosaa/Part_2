@@ -140,3 +140,7 @@ margin-top: 0;
     text-align: center;
     margin: 0 auto;
 }
+.my-aboutus h2{
+    text-align: center; 
+    background-color: rgb(115, 187, 115);
+}
