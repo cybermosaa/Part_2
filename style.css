@@ -179,7 +179,7 @@ margin-top: 0;
   
   .my-looks-items img {
     width: 200px;        /* change to column width*/
-    height: auto;
+   height: auto;
     border-radius: 10px;
   }
   
