@@ -183,6 +183,11 @@ margin-top: 0;
     border-radius: 10px;
   }
   
+  .my-looks-items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  }
+  
   .captions {
     margin-top: 10px;
     font-weight: bold;
