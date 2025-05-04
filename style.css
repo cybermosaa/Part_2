@@ -103,6 +103,9 @@ a {
     color: rgb(32, 31, 31); 
     text-size-adjust: 6px;
 }
+.my-footer{
+    text-align: center;
+}
 
 .care-grid{
     display: grid;
