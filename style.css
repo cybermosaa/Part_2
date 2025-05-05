@@ -150,7 +150,8 @@ margin-top: 0;
     background-color: rgb(115, 187, 115);
 }
 .my-aboutus p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:sans-serif;
+    font-weight: 180px;
 }
 
 .my-looksheading h3 {
@@ -213,51 +214,65 @@ margin-top: 0;
         background-color: #e3bf4a;
 }
 .my-collection{
+    display: grid;
     columns: 3;             
-    column-gap: 25px;
-    padding: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 25px 0;
+    margin: auto;
+    max-width: 1200px;
     justify-items: center;
 }
 
 .my-collection-items{
     width: 200px;
-    border-radius: 10px;
+    border-radius: 12px;
+    overflow: hidden;
     position: relative;
 }
 
 .my-collection-items img{
     width: 200px;
+    height: 250px;
     display: block;
-    border-radius: 10px;
+    border-radius: 12px;
 } 
 .text-overlay{
-    background-color:rgba(63, 60, 60, 0.281) ;
+    position: absolute;
+    bottom: 0;
+    width: 100% ;
+    background-color: rgba(0, 0, 0, 0.5);
     color: whitesmoke;
     text-align: center;
-    width: 200px;
-    padding: 10px;
+    padding: 12px;
     font-weight: bold;
     font-family: sans-serif;
     letter-spacing: 0.5px;
 }   
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .my-collection {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
+  /* @media (max-width: 480px) {
+    .my-collection {
+      grid-template-columns: 1fr;
+    }
+  } */
+
   @media (max-width: 600px) {
     .my-collection {
       grid-template-columns: 1fr;
     }
-  
-    .text-overlay {
-      font-size: 14px;
-      padding: 8px 0;
+
+    .my-collection-items img {
+      height: 200px;
     }
   }
-  .my-collection-items:hover {
+
+.my-collection-items:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
   }
@@ -324,6 +339,26 @@ margin-top: 0;
     font-size: 15px ;
     margin-top: 20px;
 }
+
+/* Tablets (portrait and landscape) */
+@media (max-width: 768px) {
+    /* Adjust layout for tablets */
+    .your-class {
+      /* example: */
+      grid-template-columns: repeat(2, 1fr);
+      font-size: 16px;
+    }
+  }
+  
+  /* Mobile devices */
+  @media (max-width: 480px) {
+    /* Adjust layout for mobile phones */
+    .your-class {
+      grid-template-columns: 1fr;
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
   
 
 
