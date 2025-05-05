@@ -290,6 +290,40 @@ margin-top: 0;
     border-radius: 5px;
     cursor: pointer;
   }
+
+.store-info {
+    text-align: center;
+    margin: 35px auto;
+    padding: 27px;
+    border-color: #356834;
+    border: 2px black;
+    width: 500px;
+    font-family: sans-serif;
+}
+.store-info h2{
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 20px ;
+
+}
+
+.store-address p,
+.store-hours p
+{
+    color: #555;
+    font-size: 15px;
+    margin: 5px;
+}
+.store-hours h4{
+    color: #333;
+    margin-top: 25px;
+
+}
+.store-note {
+    color: #1b35ddf0;
+    font-size: 15px ;
+    margin-top: 20px;
+}
   
 
 
