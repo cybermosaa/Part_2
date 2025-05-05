@@ -262,7 +262,7 @@ margin-top: 0;
     }
   } */
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     .my-collection {
       grid-template-columns: 1fr;
     }
@@ -270,7 +270,7 @@ margin-top: 0;
     .my-collection-items img {
       height: 200px;
     }
-  }
+  } */
 
 .my-collection-items:hover {
     transform: translateY(-5px);
