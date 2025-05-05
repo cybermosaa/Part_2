@@ -187,7 +187,7 @@ margin-top: 0;
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
   }
-  
+
   .captions {
     margin-top: 10px;
     font-weight: bold;
@@ -212,5 +212,51 @@ margin-top: 0;
 #backToTop:hover {
         background-color: #e3bf4a;
 }
+.my-collection {
+    columns: 3;              /* 3 columns on large screens */
+    column-gap: 20px;
+    padding: 20px;
+  }
+  
+  .my-collection-items {
+    background-color:  #fff;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  /* .my-looks-items img {
+    width: 200px;        
+   height: auto;
+    border-radius: 10px;
+  }
+  
+  .my-looks-items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .captions {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  } */
+  .text-overlay {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+
+  }
 
 
