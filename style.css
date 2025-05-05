@@ -240,7 +240,7 @@ margin-top: 0;
     font-family: sans-serif;
     letter-spacing: 0.5px;
 }   
-/* 
+
 @media (max-width: 900px) {
     .my-collection {
       grid-template-columns: repeat(2, 1fr);
@@ -256,7 +256,7 @@ margin-top: 0;
       font-size: 14px;
       padding: 8px 0;
     }
-  } */
+  }
   .my-collection-items:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
