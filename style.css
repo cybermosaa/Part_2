@@ -164,7 +164,7 @@ margin-top: 0;
 }
 
 /* tablet screen */
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .about-section {
       flex-direction: column;
       padding: 2rem 1.5rem;
@@ -178,7 +178,7 @@ margin-top: 0;
     .about-text {
       text-align: center;
     }
-  } */
+  }
   /*  mobile screens*/
   @media screen and (max-width: 480px) {
     .about-section {
