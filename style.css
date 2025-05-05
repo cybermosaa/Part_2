@@ -366,14 +366,18 @@ margin-top: 0;
   }
 
 .my-checkout{
-    width: 500px;
-    margin: 35px;
+    width: 50%;
+    margin: 0 auto;
     padding: 25px;
     border-radius: 16px;
     background-color: #d8f8d6;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) ;
     text-align: center;
     font-family: sans-serif;
+    /* center the form */
+   
+  
+
 }
 .my-checkout h2{
     font-style: normal;
