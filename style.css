@@ -145,6 +145,7 @@ margin-top: 0;
     text-align: center;
     margin: 0 auto;
 }
+
 .my-aboutus h2{
     text-align: center; 
     background-color: rgb(115, 187, 115);
@@ -153,6 +154,52 @@ margin-top: 0;
     font-family:sans-serif;
     font-weight: 180px;
 }
+.my-aboutus img{
+    max-width: 200px;
+      width: 500px;            /* sets max display width */
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+/* tablet screen */
+/* @media screen and (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+    }
+  
+    .about-section img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  } */
+  /*  mobile screens*/
+  @media screen and (max-width: 480px) {
+    .about-section {
+      padding: 1.5rem 1rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  
+    .about-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
 
 .my-looksheading h3 {
  font-size: 20px;
@@ -262,7 +309,7 @@ margin-top: 0;
     }
   } */
 
-  /* @media (max-width: 600px) {
+  @media (max-width: 600px) {
     .my-collection {
       grid-template-columns: 1fr;
     }
@@ -270,7 +317,7 @@ margin-top: 0;
     .my-collection-items img {
       height: 200px;
     }
-  } */
+  }
 
 .my-collection-items:hover {
     transform: translateY(-5px);
