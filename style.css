@@ -281,15 +281,15 @@ margin-top: 0;
 .checkout-form label{
     margin: 10px 0 5px;
 }
-/* .checkout-form button {
-    margin-top: 15px;
-    padding: 10px;
+.checkout-form button {
+    margin-top: 14px;
+   padding: 10px;
     background-color: black;
-    color: white;
+    color: whitesmoke;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  } */
+  }
   
 
 
