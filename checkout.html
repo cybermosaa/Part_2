@@ -19,28 +19,35 @@
         <br>
     </nav>
 
-    <form>
-        <!-- Remove the styles for label & make css -->
+  
+        <section class="my-checkout">
+           <h2> Sign Up to Checkout</h2>
+           <form class="checkout-form">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Your first name" required>
+        
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Your last name" required>
+        
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="Shipping address" required>
+        
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="Your city" required>
+        
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Phone number" required>
+        
+            <label class="checkbox-label">
+              <input type="checkbox"> Text me with new arrivals
+            </label>
+        
+            <button type="submit">Proceed to Checkout</button>
+           </form>
+         
+        </section>
         <br>
-        <label style="text-align: center;">First Name</label>
-       <input type="text"  style="text-align: center;">
-       <br/>
-       <label  style="text-align: center;">Last Name</label>
-       <input type="text"  style="text-align: center;">
-       <br/>
-       <label  style="text-align: center;">Address: </label>
-       <input type="text"  style="text-align: center;">
-       <br/>
-       <label  style="text-align: center;">City: </label>
-       <input type="text"  style="text-align: center;">
-       <br/>
-       <label style="text-align: center;" >Phone: </label>
-       <input type="text" style="text-align: center;">
-       <br/>
-       <label  style="text-align: center;">Text me with new arrivals</label>
-       <input type="checkbox" style="text-align: center;">
-    
-    </form> 
+      
     
     <button id="backToTop" title="Go to top">↑ Back toTop</button>
 
