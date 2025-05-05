@@ -227,23 +227,17 @@ margin-top: 0;
    text-align: center;
   }
   
-  /* .my-looks-items img {
+  .my-looks-items img {
     width: 200px;        
    height: auto;
     border-radius: 10px;
   }
   
-  .my-looks-items:hover {
+  /* .my-looks-items:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-  }
-  
-  .captions {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
   } */
+  
   .text-overlay {
     /* position: absolute;
     top: 50%;
