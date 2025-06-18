@@ -51,18 +51,19 @@ function initLightbox() {
         document.body.style.overflow = 'hidden'; // Prevent scrolling
     };
 
-    closeBtn.addEventListener('click', ()=> {
+    closeBtn.add('click', ()=>{
       lightbox.classList.add('hidden');
       document.body.style.overflow ='';
     });
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = '';
-        }
+    
+    lightbox.addEventListener('', (e) => {
+      if (e.target === lightbox){
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
     });
-}
+  }
+
 
 // Searching
 function initSearch() {
