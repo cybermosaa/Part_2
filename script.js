@@ -66,13 +66,14 @@ function initLightbox() {
 
 
 // Searching
-function initSearch() {
-    const searchInput = document.getElementById('searchInput');
-    
-    searchInput.addEventListener('input', () => {
-        const query = searchInput.value.trim();
-        loadGallery(query);
-    });
+function initSearch(){
+  const searchInput = document.getElementById('searchInput');
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim();
+  loadGallery(query);
+
+  })
 }
 
 // Back to top button 
