@@ -51,9 +51,9 @@ function initLightbox() {
         document.body.style.overflow = 'hidden'; // Prevent scrolling
     };
 
-    closeBtn.addEventListener('click', () => {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = '';
+    closeBtn.addEventListener('click', ()=> {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow ='';
     });
 
     lightbox.addEventListener('click', (e) => {
