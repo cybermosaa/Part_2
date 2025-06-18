@@ -109,7 +109,7 @@ function validateForm(formId) {
                 field.classList.remove('error');
             }
         });
-  // Email Validataion
+  // email validation
         const email = form.querySelector('[type="email"]');
         if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
             isValid = false;
@@ -123,8 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
     validateForm('contactForm');
     validateForm('enquiryForm');
 });
-// Show success message
-  alert('Thank you for your message! We will get back to you soon.');
+// succesful validation message
+  alert('Thank you! We will get to you as soon as possible.');
   form.reset();
+  
   
 
