@@ -1,87 +1,127 @@
-
-// Sample images (replace with your own image links)
-const imageLinks = [
-  { src: 'images/beanieootd-wom.jpeg', tag: ''},
-  {src: 'images/brownblue-adidasjacketootd.jpeg', tag: ''},
-  {src: 'images/lambojacketootd-wom.jpeg',tag: ''},
-  {src: 'images/scotchbuttonupootd.jpeg', tag: ''},
-  {src: 'images/darkblujeaneootd.jpeg',tag: ''}
-];
-
-
-const gallery = document.querySelector('.gallery-grid');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const closeBtn = document.getElementById('closeBtn');
-const searchInput = document.getElementById('searchInput');
-
-// Load images into the gallery
-imageLinks.forEach(src => {
-  const img = document.createElement('img');
-  img.src = src;
-  img.alt = "Gallery Image";
-  img.addEventListener('click', () => {
-    alert("Image clicked! Add more interactions here.");
-  });
-  gallery.appendChild(img);
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all functionality
+    initGallery();
+    initLightbox();
+    initSearch();
+    initBackToTop();
+    initInteractiveElements();
 });
 
-// Lightbox open
-function openLightbox(src) {
-  lightboxImg.src = src;
-  lightbox.classList.remove('hidden');
+// Gallery Functionality
+function initGallery() {
+    const gallery = document.getElementById('gallery');
+    const images = [
+        { src: 'images/example1.jpg', alt: 'Vintage denim jacket', tags: 'denim jacket vintage' },
+        { src: 'images/example2.jpg', alt: 'Floral summer dress', tags: 'dress floral summer' },
+        // Add more images with tags as needed
+    ];
+
+    function loadGallery(query = '') {
+        gallery.innerHTML = '';
+        const filtered = query ? 
+            images.filter(img => img.tags.includes(query.toLowerCase())) : 
+            images;
+
+        filtered.forEach(img => {
+            const imgElement = document.createElement('img');
+            imgElement.src = img.src;
+            imgElement.alt = img.alt;
+            imgElement.classList.add('gallery-item');
+            imgElement.setAttribute('data-tags', img.tags);
+            imgElement.addEventListener('click', () => openLightbox(img.src, img.alt));
+            gallery.appendChild(imgElement);
+        });
+    }
+
+    loadGallery();
+     window.loadGallery = loadGallery; // Make available for search
 }
 
-// Lightbox close
-closeBtn.addEventListener('click', () => {
-  lightbox.classList.add('hidden');
-  lightboxImg.src = '';
+//Lightbox Functionality
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+
+    window.openLightbox = function(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    };
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Searching
+function initSearch() {
+    const searchInput = document.getElementById('searchInput');
+    
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.trim();
+        loadGallery(query);
+    });
+}
+
+// Back to top button 
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Form Validation for Contact & Enquiry
+function validateForm(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+  // field validation
+   form.querySelectorAll('[required]').forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('error');
+            } else {
+                field.classList.remove('error');
+            }
+        });
+  // Email Validataion
+        const email = form.querySelector('[type="email"]');
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            isValid = false;
+            email.classList.add('error');
+        }
+    });
+}
+// Initialize form Validation
+document.addEventListener('DOMContentLoaded', function() {
+    validateForm('contactForm');
+    validateForm('enquiryForm');
 });
-
-// Close lightbox on background click
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    lightbox.classList.add('hidden');
-    lightboxImg.src = '';
-  }
-});
-
-// Search functionality
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value;
-  loadGallery(query);
-});
-
-// Initial load
-loadGallery();
-
-// Client Side Validation
-document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-  const name = this.name.value.trim();
-  const email = this.email.value.trim();
-
-  if (!name || !email.includes('@')) {
-    e.preventDefault();
-    alert('Please enter a valid name and email.');
-  }
-});
-
-// Enquiry Processing and Response
-document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  const formData = new FormData(this);
-  const response = await fetch('https://formspree.io/f/your-id', {
-    method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  });
-
-  if (response.ok) {
-    alert('Thank you! Your enquiry has been submitted.');
-    this.reset();
-  } else {
-    alert('Oops! There was a problem. Try again later.');
-  }
-});
+// Show success message
+  alert('Thank you for your message! We will get back to you soon.');
+  form.reset();
+  
 
