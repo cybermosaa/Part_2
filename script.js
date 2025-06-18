@@ -124,8 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
     validateForm('enquiryForm');
 });
 // succesful validation message
-  alert('Thank you! We will get to you as soon as possible.');
-  form.reset();
+ alert('Thank you! We will get in get in touch as soon as possible.')
+ form.reset();
   
   
 

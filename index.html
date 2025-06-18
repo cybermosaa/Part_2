@@ -50,23 +50,14 @@
     <img id="lightboxImg" src="" alt="Zoomed view of selected image" />
   </div>
 
-<!-- #closeBtn(X - Close Icon) to close the LightBox hwne the user is vieweing an enlarged image -->
-    <span id="closeBtn" aria-label="Close Preview">&times;</span>
+abel="Close Preview">&times;</span>
 
       <script src="script.js"></script>
 <!-- #searchInput(search bar input Field) to search/filter images by keywords -->
-    <input type="text" id="searchInput" placeholder="Search images by tags (e.g. 'city', 'river')" />
-    <!-- IN JS
-     searchInput.addEventListener('input', () => {
-  const query = searchInput.value;
-  loadGallery(query);
-});
-    -->
-
-    <!-- Hidden -->
-     <!-- lightbox.classList.add('hidden'); // hides the lightbox
-lightbox.classList.remove('hidden'); // shows the lightbox
- -->
+    <div>
+    <input type="text" id="searchInput" placeholder="Search images by tags (e.g. 'jacket', 'denim')" aria-label="earch lookbook images"/>
+    <label for="searchInput" class="sr-only">Search images</label>
+    </div>
 
     <img class="home-image" src="images/clothingrack-1.jpeg" alt="clothing rack" height="650" width="1432">
 
