@@ -45,9 +45,9 @@ function initLightbox() {
   
 
     window.openLightbox = function(src, alt) {
-        lightboxImg.src = src;
-        lightboxImg.alt = alt;
-        lightbox.classList.remove('hidden');
+       lightboxImg.src = src;
+       lightboxImg.alt = alt;
+       lightbox.classList.remove('hidden');
         document.body.style.overflow = 'hidden'; // Prevent scrolling
     };
 
