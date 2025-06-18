@@ -76,22 +76,22 @@ function initSearch(){
   })
 }
 
-// Back to top button 
-function initBackToTop() {
-    const backToTopBtn = document.getElementById('backToTop');
+// // Back to top button 
+// function initBackToTop() {
+//     const backToTopBtn = document.getElementById('backToTop');
     
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
+//     window.addEventListener('scroll', () => {
+//         if (window.pageYOffset > 300) {
+//             backToTopBtn.style.display = 'block';
+//         } else {
+//             backToTopBtn.style.display = 'none';
+//         }
+//     });
     
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
+//     backToTopBtn.addEventListener('click', () => {
+//         window.scrollTo({ top: 0, behavior: 'smooth' });
+//     });
+// }
 
 // Form Validation for Contact & Enquiry
 function validateForm(formId) {
