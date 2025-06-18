@@ -42,6 +42,7 @@ function initLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const closeBtn = document.getElementById('closeBtn');
+  
 
     window.openLightbox = function(src, alt) {
         lightboxImg.src = src;
