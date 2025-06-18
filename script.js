@@ -100,23 +100,7 @@ function validateForm(formId) {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         let isValid = true;
-  // field validation
-   form.querySelectorAll('[required]').forEach(field => {
-            if (!field.value.trim()) {
-                isValid = false;
-                field.classList.add('error');
-            } else {
-                field.classList.remove('error');
-            }
-        });
-  // Email Validataion
-        const email = form.querySelector('[type="email"]');
-        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-            isValid = false;
-            email.classList.add('error');
-        }
-    });
-}
+ 
 // Initialize form Validation
 document.addEventListener('DOMContentLoaded', function() {
     validateForm('contactForm');
