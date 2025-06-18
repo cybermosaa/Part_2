@@ -33,9 +33,9 @@ function initGallery() {
         });
     }
 
-//     loadGallery();
-//      window.loadGallery = loadGallery; // Make available for search
-// }
+    loadGallery();
+     window.loadGallery = loadGallery; // Make available for search
+}
 
 //Lightbox Functionality
 function initLightbox() {
